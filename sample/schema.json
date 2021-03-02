@@ -1,0 +1,50 @@
+{
+  "tables": {
+    "payment_mode_outlet_dtl": {
+      "config": {
+        "imports": ["package.model.PaymentModeMST"],
+        "annotations": []
+      },
+      "columns": {
+        "payment_mode_mst": {
+          ":typ": "PaymentModeMST",
+          "join": "product_brand_mst_id",
+          "joinNullable":"false",
+          "annotations": [
+            ":mto",
+            ":joinColumn"
+          ]
+        },
+        "outlet_mst": {
+          ":typ": "OutletMST",
+          "join": "outlet_mst_id",
+          "annotations": [
+            ":mto",
+            ":joinColumn"
+          ]
+        },
+        "system_mst": {
+          ":typ": "SystemMST",
+          "join": "system_mst_id",
+          "annotations": [
+            ":mto",
+            ":joinColumn"
+          ]
+        },
+        "path": {
+          ":typ": ":str",
+          "annotations": [
+            ":column",
+            "@Min(message = \"not allows ${column}\")"
+          ]
+        },
+        "sort_order": {
+          ":typ": ":int",
+          "annotations": [
+            ":column"
+          ]
+        }
+      }
+    }
+  }
+}
