@@ -1,12 +1,8 @@
 imports = """
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.springframework.data.annotation.CreatedBy;
-import org.spr ingframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
+import javax.validation.constraints.NotNull;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 import java.time.LocalDate;
 """

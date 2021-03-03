@@ -1,6 +1,6 @@
 {
   "shortCodes": {
-    "package": "com.harvices.getrokda",
+    "package": "com.harvices.getrokdaapi",
     ":str": "String",
     ":int": "Integer",
     ":typ": "type",

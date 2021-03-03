@@ -38,7 +38,7 @@ public class ${model.cap}Service {
     }
 
     public ${model.cap} update(${model.cap} mst) throws Exception {
-        ${model.cap} existing = getById(id);
+        ${model.cap} existing = repository.findById(mst.getId()).orElseThrow(()  -> new Exception("${model.cap} not found"));
         return repository.save(mst);
     }
 
