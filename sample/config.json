@@ -1,33 +1,18 @@
 {
-  "createModels": true,
-  "createRepositories": true,
-  "createServices": true,
-  "createControllers": true,
   "shortCodes": {
     "package": "com.harvices.getrokda",
-    ":str": "String",
-    ":int": "Integer",
-    ":typ": "type",
-    ":rel": "relation",
-    ":insb": "insertable",
-    ":updb": "updatable",
-    ":jc": "join_column",
-    ":f": "false",
-    ":t": "true",
-    ":Date": "Date",
-    ":nbl": "Nullable",
-    ":mto": "@ManyToOne(fetch = FetchType.EAGER)",
-    ":joinColumn": "@JoinColumn(name = \"${column}_id\")",
-    ":column-iu-false":"@Column(name = \"${column}_id\", insertable = false, updatable = false)",
-    ":column_id":"@Column(name = \"${column}_id\")",
-    ":column":"@Column(name = \"${column}\")",
-    ":column-unique-true":"@Column(name = \"${column}\" , unique=true)"
-  },
-  "transform": {
-    "toCapital": [
-      "dtl",
-      "mst",
-      "trx"
-    ]
+    ":st": "String",
+    ":in": "Integer",
+    ":lg": "Long",
+    ":tp": "type",
+    ":ld": "LocalDate",
+    ":lt": "LocalTime",
+    ":ldt": "LocalDateTime",
+    "@mto": "@ManyToOne(fetch = FetchType.EAGER)",
+    "@joinColumn": "@JoinColumn(name = \"${column}_id\")",
+    "@column-iu-false": "@Column(name = \"${column}_id\", insertable = false, updatable = false)",
+    "@column_id": "@Column(name = \"${column}_id\")",
+    "@column": "@Column(name = \"${column}\")",
+    "@column-unique-true": "@Column(name = \"${column}\" , unique=true)"
   }
 }

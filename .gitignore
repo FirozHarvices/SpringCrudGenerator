@@ -1,3 +1,6 @@
 /output
 /.vscode
 __pycache__
+getrokda*/
+schema/
+schema.json

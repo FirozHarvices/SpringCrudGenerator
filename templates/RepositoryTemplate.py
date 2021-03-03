@@ -9,7 +9,6 @@ import java.util.Optional;
 
 public interface ${model}Repository extends JpaRepository<${model}, Long> {
     List<${model}> findByIsActiveTrue();
-    Optional<${model}> findByIsActiveTrueAndId(long id);
-    List<${model}> findByIsActiveTrueAndId(long id);
+    Optional<${model}> findByIsActiveTrueAndId(Long id);
 }
 """
