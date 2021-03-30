@@ -1,45 +1,108 @@
 {
   "tables": {
-    "payment_mode_outlet_dtl": {
+    "consumer_mst": {
       "config": {
-        "imports": ["package.model.PaymentModeMST"],
+        "imports": [
+          "package.enums.Gender",
+          "javax.validation.constraints.Email"
+        ],
         "annotations": []
       },
       "columns": {
-        "payment_mode_mst": {
-          ":typ": "PaymentModeMST",
-          "join": "product_brand_mst_id",
-          "joinNullable":"false",
-          "annotations": [
-            ":mto",
-            ":joinColumn"
-          ]
-        },
-        "outlet_mst": {
-          ":typ": "OutletMST",
-          "join": "outlet_mst_id",
-          "annotations": [
-            ":mto",
-            ":joinColumn"
-          ]
-        },
-        "system_mst": {
-          ":typ": "SystemMST",
-          "join": "system_mst_id",
-          "annotations": [
-            ":mto",
-            ":joinColumn"
-          ]
-        },
-        "path": {
+        "consumer_first_name": {
           ":typ": ":str",
           "annotations": [
-            ":column",
-            "@Min(message = \"not allows ${column}\")"
+            ":notnull",
+            ":column"
           ]
         },
-        "sort_order": {
-          ":typ": ":int",
+        "consumer_last_name": {
+          ":typ": ":str",
+          "annotations": [
+            ":notnull",
+            ":column"
+          ]
+        },
+        "consumer_group_mst": {
+          ":typ": "ConsumerGroupMST",
+          "join":"consumer_group_mst_id",
+          "joinNullable":"false",
+          "annotations": [
+            ":joinColumn",
+            ":mto"
+          ]
+        },
+        "gender": {
+          ":typ": "Gender",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "birth_date": {
+          ":typ": "LocalDate",
+          "annotations": [
+            ":v-date",
+            ":column"
+          ]
+        },
+        "anniversary": {
+          ":typ": "LocalDate",
+          "annotations": [
+            ":v-date",
+            ":column"
+          ]
+        },
+        "primary_email": {
+          ":typ": ":str",
+          "annotations": [
+            ":v-email",
+            ":column"
+          ]
+        },
+        "primary_contact": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "pincode": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "bank_name": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "branch_name": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "ifsc_code": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "bank_account_number": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "account_holder_name": {
+          ":typ": ":str",
+          "annotations": [
+            ":column"
+          ]
+        },
+        "upi_id": {
+          ":typ": ":str",
           "annotations": [
             ":column"
           ]

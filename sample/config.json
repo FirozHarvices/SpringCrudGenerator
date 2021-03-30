@@ -1,18 +1,24 @@
 {
   "shortCodes": {
-    "package": "com.harvices.getrokda",
-    ":st": "String",
-    ":in": "Integer",
-    ":lg": "Long",
-    ":tp": "type",
-    ":ld": "LocalDate",
-    ":lt": "LocalTime",
-    ":ldt": "LocalDateTime",
-    "@mto": "@ManyToOne(fetch = FetchType.EAGER)",
-    "@joinColumn": "@JoinColumn(name = \"${column}_id\")",
-    "@column-iu-false": "@Column(name = \"${column}_id\", insertable = false, updatable = false)",
-    "@column_id": "@Column(name = \"${column}_id\")",
-    "@column": "@Column(name = \"${column}\")",
-    "@column-unique-true": "@Column(name = \"${column}\" , unique=true)"
+    "package": "com.harvices.getrokdaapi",
+    ":str": "String",
+    ":int": "Integer",
+    ":typ": "type",
+    ":jc": "join_column",
+    ":f": "false",
+    ":t": "true",
+    ":bln":"Boolean",
+    ":mto": "@ManyToOne(fetch = FetchType.EAGER)",
+    ":joinColumn": "@JoinColumn(name = \"${column}_id\")",
+    ":column-iu-false": "@Column(name = \"${column}_id\", insertable = false, updatable = false)",
+    ":column_id": "@Column(name = \"${column}_id\")",
+    ":column": "@Column(name = \"${column}\")",
+    ":column-unique-true": "@Column(name = \"${column}\" , unique=true)",
+    ":notnull":"@NotNull(message = \"${column.var} is Required!\")",
+    ":v-dateTime":  "@JsonFormat(pattern = \"yyyy-MM-dd'T'HH:mm:ss\")",
+    ":v-time":  "@JsonFormat(pattern = \"HH:mm:ss\")",
+    ":v-date":  "@JsonFormat(pattern = \"yyyy-MM-dd\")",
+    ":v-email" : "@Email(message = \"email is not valid\")",
+    ":im-double" : "java.lang.Double"
   }
 }

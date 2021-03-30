@@ -13,10 +13,11 @@ def createModel(entity, package, imports, klass, fields):
     baseModel = baseModelTemplate.template
     baseModel = replace(baseModel, "package", package)
 
-    writeFile(PROJECT_NAME + "/models/" +
+    writeFile(PROJECT_NAME + "/model/" +
               toCamelCase(entity, True)+".java", model)
 
-    writeFile(PROJECT_NAME + "/models/BaseModel.java", baseModel)
+    # TODO : persist this while working with folder of schema
+    writeFile(PROJECT_NAME + "/model/BaseModel.java", baseModel)
 
 
 def createDAO(entity, package):
@@ -45,7 +46,7 @@ def createService(entity, package):
     service = replace(service, "model.cap", toCamelCase(entity, True))
     service = replace(service, "model.cu", entity.upper())
     service = replace(service, "model.small", toCamelCase(entity))
-    writeFile(PROJECT_NAME + "/service/" +
+    writeFile(PROJECT_NAME + "/services/" +
               toCamelCase(entity, True)+"Service.java", service)
 
 
@@ -123,15 +124,15 @@ def run(f, shortCodes, PROJECT_NAME, config):
         createDAO(table, package)
         createController(table, package)
         createService(table, package)
-    createConstantsFile(entityNameArr, package)
+    # createConstantsFile(entityNameArr, package)
     print("generated schema for :"+f)
 
 
-# PROJECT_NAME = input("project name : ")
-PROJECT_NAME = "getrokdaapi"
+PROJECT_NAME = input("project name : ")
+# PROJECT_NAME = "abc"
 
-# folderOrFile = input("do you have schema folder or file?\n1 = folder\n2 = file\nenter your choice : ")
-folderOrFile = "1"
+folderOrFile = input("do you have schema folder or file?\n1 = folder\n2 = file\nenter your choice : ")
+# folderOrFile = "1"
 
 if(folderOrFile == "2"):
     if(os.path.isfile("schema.json")):
