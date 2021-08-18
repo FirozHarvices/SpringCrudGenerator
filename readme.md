@@ -5,7 +5,7 @@
 > this project is in beta phase. so fell free to report issues
 
 ## Installation
-- clone this repository using `git clone https://github.com/HarvicesTechnologies/SpringCrudGenerator.git`
+- clone this repository using `git clone https://github.com/FirozHarvices/SpringCrudGenerator.git`
 - Download & install  [python3](htttp://www.python.org/downloads/ "python3")
 - open terminal on cloned repository folder.
 
