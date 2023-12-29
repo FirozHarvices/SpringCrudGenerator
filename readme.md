@@ -2,7 +2,7 @@
 
 > using this python script you can automate boring process of creating crud with model/controller/repository/service pattern in java with spring-boot
 
-> this project is in beta phase. so fell free to report issues
+> this project is in beta phase. so feel free to report issues
 
 ## Installation
 - clone this repository using `git clone https://github.com/FirozHarvices/SpringCrudGenerator.git`
